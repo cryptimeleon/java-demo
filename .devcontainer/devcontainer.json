@@ -8,8 +8,8 @@
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "none",
-			"installMaven": "false",
-			"mavenVersion": "3.8.6",
+			//"installMaven": "false",
+			//"mavenVersion": "3.8.6",
 			"installGradle": "true",
             "gradleVersion": "6.8.3"
 		}
@@ -19,12 +19,21 @@
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
-			"settings": {},
+			"settings": {
+				"java.server.launchMode": "Standard"
+			},
 			"extensions": [
 				//"streetsidesoftware.code-spell-checker"
 			]
-		}
+		},
+		"codespaces": {
+			"openFiles": [
+			  "README.md",
+			  "src/main/java/PointchevalSandersExampleCode.java"
+			]
+		  }
 	}
+	  
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
